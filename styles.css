@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #12161b;
+    color: #c9d2da;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.modo-claro {
+    background-color: #f4f2ee;
+    color: #22282f;
+}
+
+a {
+    color: #3fa8a0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2e8880;
+}
+
+/* Header */
+header {
+    background-color: #1a2029;
+    border-bottom: 1px solid #2a323c;
+    padding: 30px 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    position: relative;
+    color: #78879a;
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #3fa8a0;
+    transition: width 0.25s;
+}
+
+nav a:hover {
+    color: #c9d2da;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+#toggle-modo {
+    background: none;
+    border: 1px solid #2a323c;
+    color: #78879a;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-size: 13px;
+    padding: 6px 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+#toggle-modo:hover {
+    border-color: #3fa8a0;
+    color: #c9d2da;
+}
+
+.perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.perfil-texto h1 {
+    font-family: "Spectral", Georgia, serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #c9d2da;
+}
+
+.perfil-texto .rol {
+    color: #78879a;
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+.marco-foto {
+    width: 110px;
+    height: 110px;
+    border: 1px solid #2a323c;
+    padding: 4px;
+}
+
+.marco-foto img {
+    width: 100%;
+    height: 100%;
+}
+
+/*Main*/
+main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+section {
+    margin-bottom: 70px;
+}
+
+section h2 {
+    font-family: "Spectral", Georgia, serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Proyectos*/
+.lista-proyectos {
+    border-top: 1px solid #2a323c;
+}
+
+.fila-proyecto {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 28px 0;
+    border-bottom: 1px solid #2a323c;
+}
+
+.fila-proyecto__info {
+    flex: 0 0 60%;
+}
+
+.fila-proyecto__meta {
+    flex: 0 0 35%;
+    text-align: right;
+}
+
+.fila-proyecto h3 {
+    font-family: "Spectral", Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.fila-proyecto__info p {
+    color: #78879a;
+}
+
+.stack {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: #78879a;
+    margin-bottom: 10px;
+}
+
+.fila-proyecto__enlaces a {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.fila-proyecto__enlaces a:first-child {
+    margin-left: 0;
+}
+
+@media (max-width: 600px) {
+    .fila-proyecto {
+        flex-direction: column;
+    }
+
+    .fila-proyecto__meta {
+        text-align: left;
+    }
+}
+
+/*Formulario de contacto*/
+#form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 420px;
+}
+
+#form-contacto label {
+    display: block;
+    font-size: 13px;
+    color: #78879a;
+    margin-bottom: 5px;
+}
+
+#form-contacto input,
+#form-contacto textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #2a323c;
+    color: #c9d2da;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-size: 15px;
+    padding: 8px 0;
+}
+
+#form-contacto input:focus,
+#form-contacto textarea:focus {
+    outline: none;
+    border-bottom-color: #3fa8a0;
+}
+
+#form-contacto button {
+    align-self: flex-start;
+    margin-top: 8px;
+    background-color: #3fa8a0;
+    color: #12161b;
+    border: none;
+    padding: 10px 24px;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#form-contacto button:hover {
+    background-color: #2e8880;
+}
+
+.feedback {
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    border-left: 2px solid transparent;
+}
+
+.feedback.exito {
+    color: #3fa8a0;
+    border-left-color: #3fa8a0;
+    background-color: rgba(63, 168, 160, 0.08);
+}
+
+.feedback.error {
+    color: #c1524a;
+    border-left-color: #c1524a;
+    background-color: rgba(193, 82, 74, 0.08);
+}
+
+.feedback.error ul {
+    padding-left: 18px;
+    margin-top: 5px;
+}
+
+/*Footer*/
+footer {
+    border-top: 1px solid #2a323c;
+    padding: 30px 40px;
+    color: #78879a;
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 30px;
+}
+
+footer a {
+    color: #78879a;
+}
+
+footer a:hover {
+    color: #3fa8a0;
+}

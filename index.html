@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Daniel Enrique Sánchez Rodríguez</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#biografia">Biografía</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="perfil">
+            <div class="perfil-texto">
+                <h1>Daniel Enrique Sánchez Rodríguez</h1>
+                <p class="rol">Estudiante de Ciencias de la Computación</p>
+            </div>
+            <div class="marco-foto">
+                <img src="foto-perfil.jpg" alt="Foto de perfil de Daniel Enrique Sánchez Rodríguez" id="foto-perfil">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="biografia">
+            <h2>Biografía</h2>
+            <p>Estudiante de Ciencias de la Computación con interés en el desarrollo de herramientas prácticas que resuelven problemas concretos: desde aplicaciones de escritorio con inteligencia artificial local, hasta apps móviles con persistencia en la nube. Me interesa particularmente la arquitectura de sistemas en la nube y la administración de servidores Linux, áreas que busco seguir profundizando junto con el desarrollo de software.</p>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="lista-proyectos">
+                <article class="fila-proyecto">
+                    <div class="fila-proyecto__info">
+                        <h3>Pipeline de Análisis de Datos con IA Local</h3>
+                        <p>Aplicación de escritorio para análisis de datos asistido por inteligencia artificial ejecutada localmente, sin depender de servicios en la nube.</p>
+                    </div>
+                    <div class="fila-proyecto__meta">
+                        <p class="stack">Python · PyQt6 · Ollama (Phi-4) · Pandas · Matplotlib</p>
+                        <div class="fila-proyecto__enlaces">
+                            <a href="https://github.com/bloodstreamruns/Pipeline-de-An-lisis-de-Datos-con-IA-Local" target="_blank">Repositorio</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="fila-proyecto">
+                    <div class="fila-proyecto__info">
+                        <h3>AcadTrack</h3>
+                        <p>App de Android para que estudiantes universitarios gestionen sus asignaturas y tareas: registro, seguimiento y visualización de progreso desde un panel central, con datos sincronizados en tiempo real.</p>
+                    </div>
+                    <div class="fila-proyecto__meta">
+                        <p class="stack">Kotlin · Jetpack Compose · Firebase Firestore · MVVM</p>
+                        <div class="fila-proyecto__enlaces">
+                            <a href="https://github.com/bloodstreamruns/AcadTrack" target="_blank">Repositorio</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="fila-proyecto">
+                    <div class="fila-proyecto__info">
+                        <h3>Herramienta de Manipulación de PDF</h3>
+                        <p>Programa en Python para trabajar con archivos PDF: conversión a otros formatos y viceversa, fusión de varios archivos en uno solo, y extracción de texto.</p>
+                    </div>
+                    <div class="fila-proyecto__meta">
+                        <p class="stack">Python · pathlib · pypdf</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="form-contacto">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Email: <a href="mailto:lispector.bazterrica@proton.me">lispector.bazterrica@proton.me</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Repositorio: <a href="https://github.com/bloodstreamruns/" target="_blank">https://github.com/bloodstreamruns/</a></p>
+        <p>Portafolio desplegado: <a href="https://github.com/bloodstreamruns/bloodstreamruns.github.io" target="_blank">https://danielsanchezrodriguez.github.io</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
