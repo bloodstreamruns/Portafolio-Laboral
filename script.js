@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // funcionalidad dinámica para mostrar el año actual en el footer
     const footer = document.querySelector("footer");
     const parrafoAnio = document.createElement("p");
-    parrafoAnio.textContent = `© ${new Date().getFullYear()} [Tu Nombre]`;
+    parrafoAnio.textContent = `© ${new Date().getFullYear()} [Daniel Sánchez Rodríguez]`;
     footer.appendChild(parrafoAnio);
 
 });
