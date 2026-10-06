@@ -1,0 +1,290 @@
+<!--hice uso de una gama de tonalidades del café (color) entre suaves y claros que
+fueran reminiscentes al café (bebida) y sus diferentes formas de preparación. el
+criterio para la selección de fuentes de letra consistió en que reflejaran un estilo
+"vintage", pero sin resultar demasiado "agresivo" por medio de contornos filosos. opté
+por presentar los productos por medio de 'cards' para que se pudiera ocupar bastante
+espacio (siento que haber usado algo como un carrusel hubiera hecho que la página se
+viera demasiado pequeña, aunque consideraría el carrusel en el caso de trabajar
+en una página más compleja y que requiera más segmentos. intenté aplicar asimetría en
+la composición de las cartas, sin que resultase demasiado intrusivo.) siento que la
+composición de la página se traduce bien a un entorno móvil, a pesar de la reducción
+del tamaño disponible. con fines más didácticos que funcionales, implementé un dropdown
+menú que permite la navegación directa entre los diferentes productos. reconozco que
+algunos precios no son realistas. el nombre es en referencia al centro de extracción
+colonial 'Real de Minas de San Miguel de Heredia' de Tegucigalpa, reflejando el carácter
+'vintage' e histórico del local-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Real de Minas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cafestyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand">
+            <div class="container"> <a class="navbar-brand" href="#inicio">Café Real de Minas</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" href="#productos"> Productos </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#producto-01">Café de montaña</a></li>
+                            <li><a class="dropdown-item" href="#producto-02">Espresso</a></li>
+                            <li><a class="dropdown-item" href="#producto-03">Capuchino</a></li>
+                            <li><a class="dropdown-item" href="#producto-04">Café con leche</a></li>
+                            <li><a class="dropdown-item" href="#producto-05">Americano</a></li>
+                            <li><a class="dropdown-item" href="#producto-06">Latte</a></li>
+                            <li><a class="dropdown-item" href="#producto-07">Moka</a></li>
+                            <li><a class="dropdown-item" href="#producto-08">Café helado</a></li>
+                            <li><a class="dropdown-item" href="#producto-09">Chocolate caliente</a></li>
+                            <li><a class="dropdown-item" href="#producto-10">Rosquillas</a></li>
+                            <li><a class="dropdown-item" href="#producto-11">Quesadilla</a></li>
+                            <li><a class="dropdown-item" href="#producto-12">Pan de coco</a></li>
+                            <li><a class="dropdown-item" href="#producto-13">Tres leches</a></li>
+                            <li><a class="dropdown-item" href="#producto-14">Baleada clásica</a></li>
+                            <li><a class="dropdown-item" href="#producto-15">Té chai</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class="py-5 text-start">
+            <div class="container">
+                <h1>Café Real de Minas</h1>
+                <p>50 años de producto auténticamente hondureño</p>
+            </div>
+        </section>
+        <section id="productos" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Nuestro menú</h2>
+                <div class="row gx-4 gy-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 01</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-01.webp" class="card-img-top object-fit-cover"
+                                    alt="Taza de café negro recién colado" loading="lazy" id="producto-01">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Café de montaña</h3>
+                                <p class="card-text">Café negro colado al momento.</p>
+                                <p class="precio">L 40.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 02</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-02.webp" class="card-img-top object-fit-cover"
+                                    alt="Espresso en taza pequeña con crema dorada" loading="lazy" id="producto-02">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Espresso</h3>
+                                <p class="card-text">Café corto y fuerte.</p>
+                                <p class="precio">L 35.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 03</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-03.webp" class="card-img-top object-fit-cover"
+                                    alt="Capuchino con espuma de leche" loading="lazy" id="producto-03">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Capuchino</h3>
+                                <p class="card-text">Espresso con leche espumada.</p>
+                                <p class="precio">L 55.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 04</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-04.webp" class="card-img-top object-fit-cover"
+                                    alt="Vaso de café con leche sobre el mostrador" loading="lazy" id="producto-04">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Café con leche</h3>
+                                <p class="card-text">Mitad café, mitad leche.</p>
+                                <p class="precio">L 45.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 05</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-05.webp" class="card-img-top object-fit-cover"
+                                    alt="Taza grande de café americano" loading="lazy" id="producto-05">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Americano</h3>
+                                <p class="card-text">Espresso con agua caliente.</p>
+                                <p class="precio">L 40.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 06</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-06.webp" class="card-img-top object-fit-cover"
+                                    alt="Latte servido en vaso alto" loading="lazy" id="producto-06">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Latte</h3>
+                                <p class="card-text">Mucha leche, poco café.</p>
+                                <p class="precio">L 60.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 07</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-07.webp" class="card-img-top object-fit-cover"
+                                    alt="Moka con chocolate y espuma" loading="lazy" id="producto-07">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Moka</h3>
+                                <p class="card-text">Espresso, chocolate y leche.</p>
+                                <p class="precio">L 65.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 08</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-08.webp" class="card-img-top object-fit-cover"
+                                    alt="Vaso de café helado con hielo" loading="lazy" id="producto-08">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Café con hielo</h3>
+                                <p class="card-text">Café frío sobre hielo.</p>
+                                <p class="precio">L 50.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 09</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-09.webp" class="card-img-top object-fit-cover"
+                                    alt="Taza de chocolate caliente" loading="lazy" id="producto-09">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Chocolate caliente</h3>
+                                <p class="card-text">Chocolate de cacao, espeso.</p>
+                                <p class="precio">L 55.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 10</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-10.webp" class="card-img-top object-fit-cover"
+                                    alt="Plato con rosquillas doradas" loading="lazy" id="producto-10">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Rosquillas</h3>
+                                <p class="card-text">De maíz y queso.</p>
+                                <p class="precio">L 35.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 11</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-11.webp" class="card-img-top object-fit-cover"
+                                    alt="Porción de quesadilla hondureña" loading="lazy" id="producto-11">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Quesadilla</h3>
+                                <p class="card-text">Pan dulce de queso.</p>
+                                <p class="precio">L 45.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 12</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-12.webp" class="card-img-top object-fit-cover"
+                                    alt="Pan de coco recién horneado" loading="lazy" id="producto-12">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Pan de coco</h3>
+                                <p class="card-text">Pan con coco rallado.</p>
+                                <p class="precio">L 30.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 13</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-13.webp" class="card-img-top object-fit-cover"
+                                    alt="Porción de pastel de tres leches" loading="lazy" id="producto-13">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Pastel de tres leches</h3>
+                                <p class="card-text">Pastel bañado en tres leches.</p>
+                                <p class="precio">L 70.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 14</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-14.webp" class="card-img-top object-fit-cover"
+                                    alt="Baleada clásica" loading="lazy" id="producto-14">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Baleada clásica</h3>
+                                <p class="card-text">Frijoles, huevo y aguacate.</p>
+                                <p class="precio">L 45.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <span class="badge square etiqueta">No. 15</span>
+                            <div class="ratio ratio-4x3">
+                                <img src="img/producto-15.webp" class="card-img-top object-fit-cover"
+                                    alt="Taza de té chai con canela" loading="lazy" id="producto-15">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5">Té chai</h3>
+                                <p class="card-text">Té con especias y leche.</p>
+                                <p class="precio">L 55.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-4 text-center">
+        <h3 class="h3">© Café Real de Minas</h3>
+        <p class="mb-0">Atendemos de lunes a sábado</p>
+        <p class="mb-0">7:00 a.m. – 6:00 p.m.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+
+:root {
+    --cafe-espresso: #3b2417;
+    --cafe-tostado: #6f4e37;
+    --cafe-caramelo: #a0522d;
+    --cafe-naranja: #b04a12;
+    --cafe-mostaza: #d9a21b;
+    --cafe-leche: #d9bf9f;
+    --cafe-crema: #f6ede1;
+    --cafe-papel: #fffaf3;
+    --bs-body-bg: var(--cafe-crema);
+    --bs-body-color: var(--cafe-espresso);
+    --bs-body-font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --bs-navbar-active-color: var(--cafe-mostaza);
+}
+
+html {
+    scroll-padding-top: 4.5rem;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 0.05rem;
+}
+
+::selection {
+    background-color: var(--cafe-caramelo);
+    color: var(--cafe-crema);
+}
+
+header::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    background: linear-gradient(to bottom, var(--cafe-espresso) 0 25%, var(--cafe-naranja) 25% 50%, var(--cafe-mostaza) 50% 75%, var(--cafe-leche) 75% 100%);
+}
+
+.navbar {
+    --bs-navbar-color: var(--cafe-leche);
+    --bs-navbar-hover-color: var(--cafe-crema);
+    --bs-navbar-brand-color: var(--cafe-crema);
+    --bs-navbar-brand-hover-color: var(--cafe-mostaza);
+    background-color: var(--cafe-espresso);
+}
+
+#inicio {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, var(--cafe-espresso), var(--cafe-tostado));
+    color: var(--cafe-crema);
+}
+
+#inicio .container {
+    position: relative;
+}
+
+#inicio::before {
+    content: "50 años";
+    position: absolute;
+    right: -0.25rem;
+    bottom: -1.5rem;
+    font-family: "Instrument Serif", serif;
+    font-size: 8rem;
+    line-height: 1;
+    color: var(--cafe-mostaza);
+    opacity: 0.25;
+}
+
+#inicio h1 {
+    font-weight: 700;
+    text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+
+#inicio p {
+    font-family: "Courier New", monospace;
+}
+
+#productos h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cafe-naranja);
+    text-shadow: 0 0.125rem 0.25rem rgba(59, 36, 23, 0.3);
+}
+
+#productos h2::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.25rem;
+    margin: 0.75rem auto 0;
+    background-color: var(--cafe-naranja);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.0625rem;
+}
+
+.card {
+    --bs-card-bg: var(--cafe-papel);
+    --bs-card-border-color: var(--cafe-espresso);
+    --bs-card-border-width: 0.125rem;
+    position: relative;
+    border-radius: 1.5rem / 1rem;
+    box-shadow: 0.5rem 0.5rem 0 var(--cafe-espresso);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+    flex-direction: row;
+    height: 12rem;
+}
+
+.card-img-top {
+    border-radius: 1.375rem 0 0 1.375rem / 0.875rem 0 0 0.875rem;
+}
+
+.card-text {
+    color: var(--cafe-tostado);
+    margin-bottom: 0.25rem;
+}
+
+.etiqueta {
+    position: absolute;
+    top: -0.75rem;
+    left: -0.5rem;
+    z-index: 1;
+    border: 0.125rem solid var(--cafe-espresso);
+    background-color: var(--cafe-mostaza);
+    color: var(--cafe-espresso);
+    font-family: "Courier New", monospace;
+    font-size: 0.875rem;
+    transform: rotate(-4deg);
+}
+
+footer {
+    border-top: 0.5rem solid var(--cafe-mostaza);
+    background-color: var(--cafe-espresso);
+    color: var(--cafe-leche);
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.0625rem;
+}
+
+@media (min-width: 62rem) {
+    #inicio::before {
+        right: 2rem;
+        font-size: 14rem;
+    }
+
+    #inicio h1 {
+        font-size: 3.5rem;
+    }
+
+    .card:hover {
+        transform: translate(-0.25rem, -0.25rem);
+        box-shadow: 0.75rem 0.75rem 0 var(--cafe-espresso);
+    }
+
+    #productos h2 {
+        font-size: 2.75rem;
+    }
+
+    .card {
+        height: 12rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        transition: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
+
+.card .ratio {
+    flex: 0 0 35%;
+    max-width: 15rem;
+}
+
+.card-body {
+    align-self: center;
+    padding: 0.75rem 1rem;
+}
+
+#productos .col-12:nth-child(odd) .card {
+    flex-direction: row-reverse;
+    margin-left: auto;
+}
+
+#productos .col-12:nth-child(even) .card {
+    margin-right: auto;
+}
+
+#productos .col-12:nth-child(odd) .card-img-top {
+    border-radius: 0 1.375rem 1.375rem 0 / 0 0.875rem 0.875rem 0;
+}
+
+#productos .col-12:nth-child(odd) .etiqueta {
+    left: auto;
+    right: -0.5rem;
+    transform: rotate(3deg);
+}
+
+.dropdown-menu {
+    --bs-dropdown-bg: var(--cafe-papel);
+    --bs-dropdown-border-color: var(--cafe-espresso);
+    --bs-dropdown-border-width: 0.125rem;
+    --bs-dropdown-link-color: var(--cafe-espresso);
+    --bs-dropdown-link-hover-color: var(--cafe-espresso);
+    --bs-dropdown-link-hover-bg: var(--cafe-mostaza);
+    --bs-dropdown-link-active-color: var(--cafe-crema);
+    --bs-dropdown-link-active-bg: var(--cafe-naranja);
+    min-width: 14rem;
+    border-radius: 1.5rem / 1rem;
+    box-shadow: 0.375rem 0.375rem 0 var(--cafe-mostaza);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.precio {
+    margin-bottom: 0;
+    font-family: "Courier New", monospace;
+    font-weight: 700;
+    color: var(--cafe-naranja);
+}
+
+.dropdown-item {
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.0625rem;
+}
+
+@media (min-width: 62rem) {
+    .card-body {
+        padding: 1rem 2.5rem;
+    }
+}
